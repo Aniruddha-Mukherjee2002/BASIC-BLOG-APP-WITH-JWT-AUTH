@@ -32,7 +32,7 @@ const userSchema = Schema({
         default:'USER'
     }
 },{timestamps:true})
-
+//this will hash the password before saving.
 userSchema.pre('save',async function(next){
     const user = this;
 
